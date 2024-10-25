@@ -3,38 +3,59 @@ languageCode : 'en-us'
 title : 'Saksham Dhull'
 description: 'My personal website'
 theme : 'papermod'
-
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
 minify:
   disableXML: true
   minifyOutput: true
 menu:
   main:
-    - identifier: home
-      name: 'home'
-      url: /
-      weight: 1
-    - identifier: blogs
-      name: 'blog'
-      url: /blogs/
-      weight: 2
-    - identifier: about
-      name: 'about'
-      url: /about/
+    # - identifier: home
+    #   name: 'home'
+    #   url: /
+    #   weight: 1
+    # - identifier: blogs
+    #   name: 'blogs'
+    #   url: /blogs/
+    #   weight: 2
+    - identifier: aboutme
+      name: 'about-me'
+      url: /aboutme/
       weight: 3
     - identifier: contact
       name: 'contact'
       url: /contact/
       weight: 4
+    # - identifier: search
+    #   name: "search"
+    #   url: /search
+    #   weight: 5
+
+markup:
+  defaultMarkdownHandler: goldmark
 
 params:
+  social : true
   # env: production
   keywords: [blog,home,personal]
   DateFormat: 'Jan 2, 2006'
-  ShowReadingTime: true
+  # ShowReadingTime: true
   ShowCodeCopyButtons: true
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
-  ShowWordCount: true
+  # ShowWordCount: true
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "favicon/favicon.ico"
+    favicon16x16: "favicon/favicon-16x16.png"
+    favicon32x32: "favicon/favicon-32x32.png"
+    apple_touch_icon: "favicon/apple-touch-icon.png"
+ 
   fuseOpts:
     isCaseSensitive: false
     shouldSort: true
@@ -45,23 +66,9 @@ params:
     limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "favicon/favicon.ico"
-    favicon16x16: "favicon/favicon-16x16.png"
-    favicon32x32: "favicon/favicon-32x32.png"
-    apple_touch_icon: "favicon/apple-touch-icon.png"
-
-  buttons:
-    - name: Archive
-      url: "/archive"
-    - name: Github
-      url: "https://github.com/"
-
   profileMode:
-    title: "Hi, I am Saksham"
-    subtitle: "Software Engineer"
+    title: "Hi, I am Saksham!"
+    subtitle: "Software Engineer, Samsung Research"
     enabled: true
 
   socialIcons: # optional
@@ -71,3 +78,5 @@ params:
       url: "https://www.linkedin.com/in/dhull442/"
     - name: "email"
       url: "mailto:sakshamdhull442@gmail.com"
+
+
