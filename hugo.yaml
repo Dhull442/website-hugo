@@ -1,0 +1,73 @@
+baseURL : 'https://dhull442.github.io/'
+languageCode : 'en-us'
+title : 'Saksham Dhull'
+description: 'My personal website'
+theme : 'papermod'
+
+minify:
+  disableXML: true
+  minifyOutput: true
+menu:
+  main:
+    - identifier: home
+      name: 'home'
+      url: /
+      weight: 1
+    - identifier: blogs
+      name: 'blog'
+      url: /blogs/
+      weight: 2
+    - identifier: about
+      name: 'about'
+      url: /about/
+      weight: 3
+    - identifier: contact
+      name: 'contact'
+      url: /contact/
+      weight: 4
+
+params:
+  # env: production
+  keywords: [blog,home,personal]
+  DateFormat: 'Jan 2, 2006'
+  ShowReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowWordCount: true
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "favicon/favicon.ico"
+    favicon16x16: "favicon/favicon-16x16.png"
+    favicon32x32: "favicon/favicon-32x32.png"
+    apple_touch_icon: "favicon/apple-touch-icon.png"
+
+  buttons:
+    - name: Archive
+      url: "/archive"
+    - name: Github
+      url: "https://github.com/"
+
+  profileMode:
+    title: "Hi, I am Saksham"
+    subtitle: "Software Engineer"
+    enabled: true
+
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/Dhull442"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/dhull442/"
+    - name: "email"
+      url: "mailto:sakshamdhull442@gmail.com"
