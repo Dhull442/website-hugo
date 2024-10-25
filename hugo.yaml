@@ -39,7 +39,7 @@ markup:
 
 params:
   social : true
-  # env: production
+  env: production
   keywords: [blog,home,personal]
   DateFormat: 'Jan 2, 2006'
   # ShowReadingTime: true
