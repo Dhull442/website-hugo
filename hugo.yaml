@@ -36,6 +36,11 @@ menu:
 
 markup:
   defaultMarkdownHandler: goldmark
+  golmark:
+    renderer: 
+      unsafe: true
+      xhtml: true
+
 
 params:
   social : true
