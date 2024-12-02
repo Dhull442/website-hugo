@@ -17,7 +17,7 @@ The journey began with laying out the very basic scene setup, creating a fixed c
 
 ### Scene 2:
 Now that we had a skeleton for the ray tracer, it was time to dive into the rendering logic. This started with implementing a hard-coded sphere at the center with colors corresponding to the vector of the ray collision point from the center. This generated a colorful sphere at the center. Now, the next structural step was to make a `hittable` class containing the different types of objects, their specific details, and the logic for color generation. This was again a structural step, and some meat was added over the skeleton of the ray-tracer. Doing a basic scene creation with two spheres leads us to this: <br>
-![Scene 2](https://github.com/Dhull442/rust-ray-tracer/blob/6213521fcabcba80313a93e1811cb9cdd812cad4/image.png)
+![Scene 2](https://github.com/Dhull442/rust-ray-tracer/blob/6213521fcabcba80313a93e1811cb9cdd812cad4/image.png "Scene 2")
 
 ### Scene 3:
 If you notice carefully, the object edges in the previous scene are a bit too crisp or edgy. We don't want this in a render and introduce aliasing. Now, aliasing is basically saying that instead of just using a single ray per pixel, you have a bunch of rays going through the same pixel, and each of these rays has a little random part to it. We basically say that a ray originates from (x + random(),y+random()) instead of (x,y). Then, we averaged out the color, which led us to create a bit smoother edge. At this point, I was very tired that day and probably introduced a bad bug because the next scene was not something I was expecting: <br>
