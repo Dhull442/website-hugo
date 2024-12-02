@@ -17,10 +17,10 @@ menu:
     #   name: 'home'
     #   url: /
     #   weight: 1
-    # - identifier: blogs
-    #   name: 'blogs'
-    #   url: /blogs/
-    #   weight: 2
+    - identifier: blogs
+      name: 'blogs'
+      url: /blogs/
+      weight: 2
     - identifier: aboutme
       name: 'about-me'
       url: /aboutme/
